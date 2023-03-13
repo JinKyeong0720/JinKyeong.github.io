@@ -16,7 +16,7 @@
 // https://youtu.be/QPEUU89AOg8
 
 let page = 1;
-let size = 25; // 한 페이지에 보이는 컨텐츠 수
+let size = 25; // 한 페이지에 보이는 컨텐츠 수(5*5)
 
 const query = document.querySelector(".query");
 const searchBox = document.querySelector(".search-box");
