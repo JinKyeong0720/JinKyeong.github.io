@@ -31,7 +31,6 @@ for (let i = 0; i < 10; i++) {
                     const white = "https://em-content.zobj.net/thumbs/120/facebook/65/medium-white-circle_26aa.png";
                     li.setAttribute("style", `background-image : url(${white})`);
                 }
-
                 checkWin();
             }
         });
@@ -42,11 +41,12 @@ for (let i = 0; i < 10; i++) {
 }
 root.append(map);
 
+
 function checkWin() {
     for (let i = 0; i < 10; i++) { // 가로
         let count = 0;
         for (let j = 0; j < 10; j++) {
-            if(mark[i][j] === turn){
+            if (mark[i][j] === turn) {
                 count++;
             }
         }
@@ -56,39 +56,52 @@ function checkWin() {
         }
     }
 
-    for(let i=0; i<10; i++){ // 세로
+    for (let i = 0; i < 10; i++) { // 세로
         let count = 0;
-        for(let j=0; j<10; j++){
-            if(mark[j][i] === turn){
+        for (let j = 0; j < 10; j++) {
+            if (mark[j][i] === turn) {
                 count++;
             }
 
-            if(count === 5){
+            if (count === 5) {
                 win = turn;
             }
         }
         count = 0;
     }
 
-    let count = 0;
-    for(let i=0; i<10; i++){ // 대각선
-        if(mark[i][i-4] === turn){
-            count++;
-        }
 
-        if(count === 5){
-            win = turn;
+    for (let i = 0; i < 10 - 4; i++) { // 대각선
+        for (let j = 0; j < 10 - 4; j++) {
+            if (mark[i][j] === turn) {
+                let count = 0;
+                for (let k = 0; k < 5; k++) {
+                    if (mark[i + k][j + k] === turn)
+                        count++;
+                }
+                
+                if (count === 5) {
+                    win = turn;
+                }
+            }
         }
     }
-    
-    count = 0;
-    for(let i=0; i<10; i++){ // 역대각선
-        if(mark[i][2-i] === turn){
-            count++;
-        }
 
-        if(count === 5){
-            win = turn;
+
+    count = 0;
+    for (let i = 4; i < 10 - 4; i++) { // 역대각선
+        for (let j = 0; j < 10 - 4; j++) {
+            if (mark[i][j] === turn) {
+                count = 0;
+                for (let k = 0; k < 5; k++) {
+                    if (mark[i - k][j + k] === turn)
+                        count++;
+                }
+                
+                if (count === 5) {
+                    win = turn;
+                }
+            }
         }
     }
 
