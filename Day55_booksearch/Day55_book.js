@@ -16,26 +16,24 @@
 // https://youtu.be/QPEUU89AOg8
 
 let page = 1;
+let size = 25; // 한 페이지에 보이는 컨텐츠 수
 
 const query = document.querySelector(".query");
-const container = document.querySelector(".container");
 const searchBox = document.querySelector(".search-box");
+
 searchBox.addEventListener("submit", e=>{
     e.preventDefault();         // submit 기본동작(submit의 기본 동작 무시)
-
     if (query !== ""){
+        page = 1;
         searchRequest(query.value, page);
+        query.value = "";
     }
-
-    searchRequest(query.value);
 });
 
 
 function searchRequest(query, page){
-    console.log("query : ", query);
-
     $.ajax({ // 세팅정보 오브젝트로 넘겨줌
-        "url": `https://dapi.kakao.com/v2/search/blog?query=${query}&page=1&size=1&target=title`, // url 키값 스트링타입 : 파라미터까지 구성돼있음
+        "url": `https://dapi.kakao.com/v3/search/book?query=${query}&page=${page}&size=${size}&target=title`, // url 키값 스트링타입 : 파라미터까지 구성돼있음
         "method": "GET", // 요청 메소드 : 어떤 방식(get, toString 등등)
         "timeout": 0, // 비동기 시간(기본 0)
         "headers": { // 오브젝트 타입으로 따로 구성했음(key value)
@@ -45,6 +43,14 @@ function searchRequest(query, page){
     
     .done((response) => { // 성공했을 때
         console.log(response);
+        
+
+
+
+
+
+
+
         
     });
 }
