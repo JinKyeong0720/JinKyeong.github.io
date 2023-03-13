@@ -119,5 +119,5 @@ function checkWin() {
 function reset() {
     turn = 1;
     win = 0;
-    locate.reload();
+    location.reload();
 }
