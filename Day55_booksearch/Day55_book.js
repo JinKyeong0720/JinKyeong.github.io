@@ -3,24 +3,25 @@
 // ㄴ Private API : 유료
 
 // Open API
-// ㄴ 공공 데이터
-// ㄴ 
-// ㄴ 
-// ...
+// ㄴ 공공 데이터 포탈
+// ㄴ 카카오 개발자 센터
+// ㄴ 네이버 개발자 센터 
+// ... 등등 많음
 
 // ajax
 // ㄴ 비동기 방식으로 페이지의 일부 정보를 갱신할 수 있는 기술
 // fetch()로도 구현 가능 (일부 브라우저 또는 하위 버전의 스크립트에서 호환 X)
 // -> jQuery.ajax() 메소드를 활용
 
+// https://youtu.be/QPEUU89AOg8
+
 let page = 1;
 
 const query = document.querySelector(".query");
-
-
+const container = document.querySelector(".container");
 const searchBox = document.querySelector(".search-box");
 searchBox.addEventListener("submit", e=>{
-    e.preventDefault();         // submit 기본동작
+    e.preventDefault();         // submit 기본동작(submit의 기본 동작 무시)
 
     if (query !== ""){
         searchRequest(query.value, page);
@@ -43,8 +44,13 @@ function searchRequest(query, page){
     })
     
     .done((response) => { // 성공했을 때
-        // console.log(response);
-        // container 안에 
+        console.log(response);
+        
+    });
+}
+
+
+// container 안에 
 
         /*
         <div class="container">
@@ -60,7 +66,6 @@ function searchRequest(query, page){
         */
 
         // 새로 생성 및 구성 완료한 result-card element(요소)를 추가
-    });
-}
-
-
+        // 페이지 정보 --> 변수로
+        // 가져온 정보를 엘리먼트 안에 넣기
+        // 카드 디자인 : 미리캔버스 등 참고
