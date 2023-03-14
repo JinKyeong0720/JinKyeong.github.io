@@ -21,8 +21,8 @@ h1 {
   margin: auto;
 }
 
-result-card{
+.result-card{
   width: 180px;
   height: 220px;
-  background-color: yellow;
+  background-color: lightblue;
 }

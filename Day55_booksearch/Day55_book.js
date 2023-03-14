@@ -41,17 +41,15 @@ function searchRequest(query, page){
         },
     })
     
-    .done((response) => { // 성공했을 때
-        console.log(response);
+    .done((response) => { // 성공했을 때 나오는 화면을 여기서 구현
+        console.log(response); 
+        const container = document.querySelector(".container");
+        container.innerText ="";
+        let result = response.document;
+
+        // for문 -> 검색해서 나온 결과 반복
         
 
-
-
-
-
-
-
-        
     });
 }
 
