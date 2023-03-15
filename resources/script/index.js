@@ -95,7 +95,7 @@ const sample = new Project(
 
 addProject(sample, "frontend", "cover", "center");
 */
-
+// 
 const bookSearch = new Project(
     "/booksearch",
     "https://em-content.zobj.net/thumbs/240/facebook/65/left-pointing-magnifying-glass_1f50d.png",
