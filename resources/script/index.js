@@ -83,26 +83,48 @@ function addProject(project, targetContainer, imageSize, imagePosition) {
 }
 
 // Projects 
-/*
-const sample = new Project(
-    "about:blank",
-    "/resources/images/yao.gif",
-    "sample",
-    "sample sample",
-    ['ReactJS','Typescript'],
-    ['2023.03.09', "2023.04.30"]
+/* Ex)
+const atm = new Project(
+    "about:blank", atm 리포지토리 주소
+    "https://em-content.zobj.net/thumbs/240/facebook/65/left-pointing-magnifying-glass_1f50d.png", 머신 일러스트 이미지 주소
+    "sample", JinKyeong BANK
+    "sample sample", Console ATM (Java mini profect)
+    ['ReactJS','Typescript'], JAVA
+    ['2023.03.09', "2023.04.30"] 2023.03.13
 );
 
-addProject(sample, "frontend", "cover", "center");
+addProject(sample, "frontend", "cover", "center"); atm, "backend", "contain", "center"
 */
 // 
+const omok = new Project(
+    "https://jinkyeong.site/Day55_omok/", 
+    "https://m.media-amazon.com/images/I/81CDsUVn5EL.png",
+    "Omok",
+    "Play Omok Service",
+    ['VanilaJS', 'jQeury', 'Kakao Search API'],
+    ['2023.03.10', "2023.03.10"]
+);
+
 const bookSearch = new Project(
-    "/booksearch",
-    "https://em-content.zobj.net/thumbs/240/facebook/65/left-pointing-magnifying-glass_1f50d.png",
+    "https://jinkyeong.site/Day55_booksearch/",
+    "https://colterreed.com/wp-content/uploads/2015/10/Book-Search.jpg",
     "Book Search",
     "Book Search and Inquiry Service",
     ['VanilaJS', 'jQeury', 'Kakao Search API'],
     ['2023.03.13', "2023.03.13"]
 );
 
+const atm = new Project(
+    "https://github.com/JinKyeong0720/atm.git",
+    "https://media.istockphoto.com/id/1152312659/vector/atm.jpg?s=612x612&w=0&k=20&c=NR9IDrr2bPxrkBWVynX7wTf2CX6bMWlQe4PWVHAZg_Y=",
+    "JinKyeong BANK",
+    "Console ATM (Java mini Project)",
+    ['JAVA'],
+    ['2023.03.13']
+);
+    
+
+
+addProject(omok, "frontend", "contain", "center");
 addProject(bookSearch, "frontend", "contain", "center");
+addProject(atm, "frontend", "contain", "center");
