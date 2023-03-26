@@ -122,9 +122,29 @@ const atm = new Project(
     ['JAVA'],
     ['2023.03.13']
 );
+
+const rpgGame = new Project(
+    "https://github.com/JinKyeong0720/rpg-game.git",
+    "https://media.istockphoto.com/id/1089774684/vector/flat-outline-game-icons.jpg?s=612x612&w=0&k=20&c=H2BLs7KkWuXdOp6OHSiySDE3B2ygwLaZBBbFBrngKLA=",
+    "RPG Game",
+    "RPG Game (Java mini Project)",
+    ['JAVA'],
+    ['2023.03.16', '2023.03.20']
+);
+
+const zombie = new Project(
+    "https://github.com/JinKyeong0720/Kill_Monsters.git",
+    "https://media.istockphoto.com/id/1094363120/vector/rpg-dungeon-game-treasure-chest.jpg?s=612x612&w=0&k=20&c=UujLrj8_1YomZCczSsWB8oXD6SbPst3H3p2-YeRLKLE=",
+    "Killing Monsters",
+    "Killing Monsters (Java mini Project)",
+    ['JAVA'],
+    ['2023.03.24', '2023.03.27']
+);
     
 
 
 addProject(omok, "frontend", "contain", "center");
 addProject(bookSearch, "frontend", "contain", "center");
-addProject(atm, "frontend", "contain", "center");
+addProject(atm, "backend", "contain", "center");
+addProject(rpgGame, "backend", "contain", "center");
+addProject(zombie, "backend", "contain", "center");
